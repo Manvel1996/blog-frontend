@@ -149,7 +149,7 @@ export const AddPost = () => {
         <Button  variant="contained" color="error" onClick={onClickRemoveImage}>
           Delete
         </Button>
-        <img className={styles.image} src={`mongodb+srv://Manvel:secret123@cluster0.aqc7djd.mongodb.net/?retryWrites=true&w=majority${imageUrl}`} alt="Uploaded" />
+        <img className={styles.image} src={`https://blog-backend-production-37d2.up.railway.app${imageUrl}`} alt="Uploaded" />
       </>
       )}
       <Modal active={active} setActive={setActive} children={modalContent()}/>

@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-    baseURL: 'mongodb+srv://Manvel:secret123@cluster0.aqc7djd.mongodb.net/?retryWrites=true&w=majority'
+    baseURL: 'https://blog-backend-production-37d2.up.railway.app'
 })
 
 instance.interceptors.request.use((config)=>{

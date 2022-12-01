@@ -42,7 +42,7 @@ export const FullPost = () => {
       <Post
         id={data._id}
         title={data.title}
-        imageUrl={data.imageUrl? `mongodb+srv://Manvel:secret123@cluster0.aqc7djd.mongodb.net/?retryWrites=true&w=majority${data.imageUrl}`: ''}
+        imageUrl={data.imageUrl? `https://blog-backend-production-37d2.up.railway.app${data.imageUrl}`: ''}
         user={data.user}
         createdAt={data.createdAt}
         viewsCount={data.viewsCount}

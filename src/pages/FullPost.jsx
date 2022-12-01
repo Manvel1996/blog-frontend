@@ -23,7 +23,7 @@ export const FullPost = () => {
       .catch(error=>{
         console.log(error,"Eror in a get post")
       })
-  },[])
+  },[id])
 
   if(isLoading){
     return <Post isLoading={isLoading} isFullPost/>

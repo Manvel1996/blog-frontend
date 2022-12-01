@@ -96,7 +96,7 @@ export const AddPost = () => {
         alert("Error can't get post")
       })
     }
-  },[])
+  },[id])
 
 
   const options = React.useMemo(

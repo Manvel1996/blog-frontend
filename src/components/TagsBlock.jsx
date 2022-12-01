@@ -23,9 +23,8 @@ export const TagsBlock = ({ items, isLoading = true }) => {
     <SideBlock title="Tags"  >
       <List className={myTheme ? "darktheme":""}>
         {(isLoading ? [...Array(5)] : items).map((name) => (
-          <a
+          <span
             key={uuidv4()}
-            style={{ textDecoration: "none", color: "black" }}
             onClick={()=>{
               dispatch(sortTagsPosts(name))
             }}
@@ -42,7 +41,7 @@ export const TagsBlock = ({ items, isLoading = true }) => {
                 )}
               </ListItemButton>
             </ListItem>
-          </a>
+          </span>
         ))}
       </List>
     </SideBlock>

@@ -16,10 +16,12 @@ function App() {
 
   const dispatch = useDispatch()
   const myTheme = useSelector(state=>state.theme)
+  
 
   useEffect(()=>{
     dispatch(fetchAuthMe())
-  },[])
+  },[dispatch])
+
 
 
 

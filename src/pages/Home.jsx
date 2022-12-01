@@ -27,7 +27,7 @@ export const Home = () => {
   useEffect(()=>{
     dispatch(fetchPosts())
     dispatch(fetchTags())
-  },[])
+  },[dispatch])
 
 
 

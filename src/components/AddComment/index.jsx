@@ -16,7 +16,7 @@ export const Index = ({postId,addComent}) => {
   const[commentText,setCommentText] = useState("")
 
   const  userData  = useSelector(state=>state.auth.data)
-  const myTheme = useSelector(state=>state.theme)
+  
  
 
   const onSubmit = async()=>{

@@ -104,9 +104,9 @@ export const Post = ({
           <ul className={styles.tags}>
             {tags.map((name) => (
               <li key={uuidv4()}>
-                <a style={{ textDecoration: "none",cursor:"pointer"}} onClick={()=>{
+                <span className={styles.postTagButton} onClick={()=>{
                   dispatch(sortTagsPosts(name))
-                }}>#{name}</a>
+                }}>#{name}</span>
               </li>
             ))}
           </ul>

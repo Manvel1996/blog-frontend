@@ -54,7 +54,7 @@ export const Home = () => {
                 key={uuidv4()} 
                 id={obj._id}
                 title= {obj.title}
-                imageUrl= {obj.imageUrl?`http://localhost:4444${obj.imageUrl}`:""}
+                imageUrl= {obj.imageUrl?`mongodb+srv://Manvel:secret123@cluster0.aqc7djd.mongodb.net/?retryWrites=true&w=majority${obj.imageUrl}`:""}
                 user={obj.user}
                 createdAt={obj.createdAt}
                 viewsCount={obj.viewsCount}

@@ -1,0 +1,14 @@
+import React from 'react';
+import styles from './UserInfo.module.scss';
+
+export const UserInfo = ({ avatarUrl, fullName, additionalText }) => {
+  return (
+    <div className={styles.root}>
+      <img className={styles.avatar} src={avatarUrl || '/noavatar.png'} alt={fullName} />
+      <div className={styles.userDetails}>
+        <span className={styles.userName}>{fullName}</span>
+        <span className={styles.additional}>{additionalText.slice(0,10)} <br/> {additionalText.slice(11,19)}</span>
+      </div>
+    </div>
+  );
+};

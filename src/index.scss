@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$blackTheme:rgb(57, 57, 76);
+
+$blackThemeButton:rgb(15, 15, 27);
+
+.app{
+  height: 100%;
+  width: 100%;
+}
+.darktheme{
+  background: $blackTheme !important;
+  color: white !important;
+  button{
+    background-color: $blackThemeButton !important;
+    color: white !important;
+    &:hover{
+      background-color: rgb(51, 5, 68) !important;
+    }
+  };
+  a{
+    color: white !important;
+  }
+  p{
+    color: white;
+  }
+  input{
+    color: white;
+  }
+}

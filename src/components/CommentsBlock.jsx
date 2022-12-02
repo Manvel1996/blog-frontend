@@ -4,7 +4,6 @@ import { SideBlock } from "./SideBlock";
 import ListItem from "@mui/material/ListItem";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import Skeleton from "@mui/material/Skeleton";
@@ -21,8 +20,8 @@ export const CommentsBlock = ({ items, children, isLoading = true }) => {
         <List >
           {isLoading ? [...Array(5)] : items?.map((obj) => (
             <React.Fragment key={uuidv4()}>
-              <ListItem alignItems="flex-start" >
-                <ListItemAvatar>
+              <ListItem alignItems="flex-start" justifyContent="start">
+                <ListItemAvatar className="commentAvatar">
                   {isLoading ? (
                     <Skeleton variant="circular" width={40} height={40} />
                   ) : (
@@ -35,10 +34,10 @@ export const CommentsBlock = ({ items, children, isLoading = true }) => {
                     <Skeleton variant="text" height={18} width={230} />
                   </div>
                 ) : (
-                  <ListItemText 
-                  primary={obj.writer}
-                  secondary={obj.text}
-                  />
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <h3><b>{obj.writer}</b></h3>
+                    <div>{obj.text}</div>
+                  </div>
                   )}
               </ListItem>
               <Divider variant="inset" component="li" />

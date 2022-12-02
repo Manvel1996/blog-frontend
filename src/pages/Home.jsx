@@ -44,7 +44,7 @@ export const Home = () => {
           setValue(1)
           }}/>
       </Tabs>
-      <Grid container spacing={4}>
+      <Grid container spacing={2}>
         <Grid xs={8} item>
           {(isPostLoading?[...Array(5)]:posts.items).map((obj) =>
             isPostLoading ?
@@ -64,8 +64,11 @@ export const Home = () => {
               />
           ))}
         </Grid>
-        <Grid xs={4} item>
-          <TagsBlock items={tags.items} isLoading={isTagsLoading} />
+        <Grid xs={4}  item direction={"column"}>
+          <TagsBlock 
+            items={tags.items} 
+            isLoading={isTagsLoading} 
+          />
           <CommentsBlock
             items={comments.items}
             isLoading={false}

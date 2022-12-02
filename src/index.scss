@@ -31,3 +31,9 @@ $blackThemeButton:rgb(15, 15, 27);
     color: white;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .commentAvatar{
+   display: none;
+  }
+}

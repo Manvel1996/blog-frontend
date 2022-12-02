@@ -9,7 +9,7 @@ export const SideBlock = ({ title, children }) => {
   const myTheme = useSelector(state=>state.theme)
 
   return (
-    <Paper  className={myTheme? "darktheme":""} style={{wordWrap: "break-word"}}>
+    <Paper  className={myTheme? "darktheme":""} id={styles.sideBlock} style={{wordWrap: "break-word"}}>
       <Typography variant="h6" classes={{ root: styles.title }}>
         {title}
       </Typography>

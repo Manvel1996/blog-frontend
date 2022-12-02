@@ -1,11 +1,5 @@
 import React from "react";
 
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import TagIcon from "@mui/icons-material/Tag";
-import ListItemText from "@mui/material/ListItemText";
 import Skeleton from "@mui/material/Skeleton";
 
 import { SideBlock } from "./SideBlock";
@@ -21,29 +15,24 @@ export const TagsBlock = ({ items, isLoading = true }) => {
 
   return (
     <SideBlock title="Tags"  >
-      <List className={myTheme ? "darktheme":""}>
+      <div className={myTheme ? "darktheme":""}>
         {(isLoading ? [...Array(5)] : items).map((name) => (
-          <span
+          <button
+            style={{border:"none",display:"block", marginBottom:"5px", width:"100%",cursor:"pointer"}}
             key={uuidv4()}
             onClick={()=>{
               dispatch(sortTagsPosts(name))
             }}
           >
-            <ListItem  disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <TagIcon />
-                </ListItemIcon>
-                {isLoading ? (
+            {isLoading ? (
                   <Skeleton width={100} />
                 ) : (
-                  <ListItemText primary={name} />
-                )}
-              </ListItemButton>
-            </ListItem>
-          </span>
+                  <h3># {name}</h3>
+                )
+            }
+          </button>
         ))}
-      </List>
+      </div>
     </SideBlock>
   );
 };

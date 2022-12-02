@@ -34,9 +34,9 @@ export const CommentsBlock = ({ items, children, isLoading = true }) => {
                     <Skeleton variant="text" height={18} width={230} />
                   </div>
                 ) : (
-                  <div style={{ display: "flex", flexDirection: "column" }}>
-                    <h3><b>{obj.writer}</b></h3>
-                    <div>{obj.text}</div>
+                  <div style={{ display: "flex", flexDirection: "column", width:"100%" }}>
+                    <h3 className="commentWriter"><b>{obj.writer}</b></h3>
+                    <p className="commentWriterText">{obj.text}</p>
                   </div>
                   )}
               </ListItem>

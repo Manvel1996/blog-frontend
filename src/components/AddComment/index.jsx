@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import { toast } from 'react-toastify';
 import { useSelector } from "react-redux";
 import axios from "../../axios";
+import { selectIsAuth } from "../../redux/slices/auth";
 
 
 
@@ -17,11 +18,14 @@ export const Index = ({postId,addComent}) => {
 
   const  userData  = useSelector(state=>state.auth.data)
   
- 
+  const isAuth = useSelector(selectIsAuth)
 
   const onSubmit = async()=>{
     if(commentText.trim().length === 0){
       return toast("Please write comment")
+    }
+    if(!isAuth){
+      return toast("Please sign in to add a comment")
     }
 
     try {

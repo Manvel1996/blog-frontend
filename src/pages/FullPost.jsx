@@ -51,7 +51,6 @@ export const FullPost = () => {
         isFullPost
       >
         <ReactMarkdown children={data.text}  />
-        <p>{data.text}</p>
       </Post>
       <CommentsBlock 
         items={data.comments}
